@@ -4,5 +4,18 @@ function DiceRoll(sides){
   if(this.roll === 0){
     return DiceRoll(sides);
   }
-  console.log(roll);
+  return roll;
+  // console.log(roll);
+  // roll = 0;
 }
+
+$(document).ready(function(){
+  $('#D20').click(function(event){
+    event.preventDefault();
+    var dice = parseInt($('#D20').val());
+    var dieResult = DiceRoll(dice);
+    $('.output').prepend('<p>' + dieResult + '</p>');
+    console.log(dieResult);
+
+  });
+});

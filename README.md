@@ -11,7 +11,7 @@ _This is a webpage where a user may create and customize a DnD character._
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| Name | Enter character name: Jeff | Return: 'Jeff'
+| Name | Enter character name: Jeff | Return: 'Jeff' |
 | Roll dice | Click roll dice | Return on screen: 15 |
 | Start base stats | Create a character | Return base stats on screen |
 | Select a race | Select "Elf" | Return "Elf" and altered base stats on screen |
