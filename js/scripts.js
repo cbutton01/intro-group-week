@@ -18,7 +18,7 @@ function Player(name){
   this.name = name;
   this.race = [];
   this.skills = [];
-  //skills
+
 }
 
 Player.prototype.raceCheck = function(){
@@ -32,10 +32,10 @@ Player.prototype.raceCheck = function(){
 
 };
 
-//Athletics, Medicine, Persuasion, Survival
+//Skills: Athletics, Medicine, Persuasion, Survival
 Player.prototype.modCheck = function(){
   if(this.skills.includes("medicine") && this.int >= 10){
-    return true;
+    roll += 1;
   } else {
     return false;
   }
