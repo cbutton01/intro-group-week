@@ -19,6 +19,10 @@ _This is a webpage where a user may create and customize a DnD character._
 | Class Selection | Select a class | Return: "Elf Druid" |
 | Backstory | Write a brief backstory to your character | Input: "I am an Elf" Output: " Jeff, Elf Druid, I am an Elf" |
 
+//dwarfs get con + 2 and str + 2
+//humans get + 1 to all
+//elfs get a dex + 2
+//halflings dex +2
 
 
 
