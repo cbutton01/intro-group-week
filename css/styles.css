@@ -6,3 +6,7 @@ button {
 .card {
   padding: 10px;
 }
+
+.stat-box {
+  width: 110px;
+}
