@@ -19,19 +19,25 @@ function Player(name){
   this.int = 10;
 }
 
-Player.prototype.newRace = function(){
+Player.prototype.raceCheck = function(){
   if(this.race.includes("elf")){
-    this.int += 2;
-  } else if(this.race.includes("human")) {
+    this.int += 10;
+  } else if(this.race.includes("human")){
     this.str += 1; this.dex += 1; this.int += 1;
   } else if(this.race.includes("dwarf")){
-    this.str += 5;
+    this.dex += 5;
   }
 
 };
 
-
-
+//Skills: Athletics, Medicine, Persuasion, Survival
+Player.prototype.modCheck = function(){
+  if(this.skills.includes("medicine") && this.int >= 10){
+    roll += 1;
+  } else {
+    return false;
+  }
+}
 //front end
 $(document).ready(function(){
   var pointsToSpend = 10;
