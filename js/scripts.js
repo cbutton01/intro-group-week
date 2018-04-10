@@ -10,6 +10,7 @@ function DiceRoll(sides){
 
 }
 
+
 function Player(name){ //player constructor
   this.name = name;
   this.race = [];
@@ -20,6 +21,7 @@ function Player(name){ //player constructor
   this.con = 10; //constitution stat
   this.wis = 10; //wisdom stat
   this.isma = 10; //charisma stat
+
 
 }
 
