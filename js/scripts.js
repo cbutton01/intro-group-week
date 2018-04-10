@@ -37,11 +37,25 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
 };
 
 //Skills: Athletics, Medicine, Persuasion, Survival
-Player.prototype.classCheck = function(){
-  if(this.class.includes("wizard") && this.int >= 12 && this.int <= 13){
+Player.prototype.intCheck = function(){
+  if(this.int <= 1){
+    roll -= 5;
+  } else if (this.int >= 2 && this.int <= 3){
+    roll -= 4;
+  } else if (this.int >= 4 && this.int <= 5){
+    roll -= 3;
+  } else if (this.int >= 6 && this.int <= 7){
+    roll -= 2;
+  } else if (this.int >= 8 && this.int <= 9){
+    roll -= 1;
+  } else if (this.int >= 12 && this.int <= 13){
     roll += 1;
   } else if (this.int >= 14 && this.int <= 15){
     roll += 2;
+  } else if (this.int >= 16 && this.int <= 17){
+    roll += 3;
+  } else if (this.int >= 19 && this.int <= 19){
+    roll += 4;
   }
 }
 //front end
