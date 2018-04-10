@@ -1,5 +1,5 @@
-var player1 = new Player("jared");
 //backend
+var player1 = new Player("jared");
 function DiceRoll(sides){
   roll = this.roll;
   roll  =  Math.floor(parseInt(Math.random() * (sides +1)));
@@ -65,16 +65,20 @@ $(document).ready(function(){
   $("#attributePoints1").text(player1.str);
   $("#attributePoints2").text(player1.dex);
   $("#attributePoints3").text(player1.con);
+  $("#attributePoints4").text(player1.int);
+  $("#attributePoints5").text(player1.wis);
+  $("#attributePoints6").text(player1.isma);
   var pointsToSpend = 10;
   $('#D20').click(function(event){
     event.preventDefault();
     var dice = parseInt($('#D20').val());
     var dieResult = DiceRoll(dice);
-    $('.output').prepend('<p>' + dieResult + '</p>');
+    $('.output').text(dieResult);
     console.log(dieResult);
 
   });
 
+  //Point/buy system for attributes
   $(".points").click(function(event){
     event.preventDefault();
 
@@ -96,8 +100,27 @@ $(document).ready(function(){
     } else if ($(this).val() === "conIncr") {
       pointsToSpend--;
       player1.con++;
+    } else if ($(this).val() === "intDecr" && player1.int > 0) {
+      pointsToSpend++;
+      player1.int--;
+    } else if ($(this).val() === "intIncr") {
+      pointsToSpend--;
+      player1.int++;
+    } else if ($(this).val() === "wisDecr" && player1.wis > 0) {
+      pointsToSpend++;
+      player1.wis--;
+    } else if ($(this).val() === "wisIncr") {
+      pointsToSpend--;
+      player1.wis++;
+    } else if ($(this).val() === "ismaDecr" && player1.isma > 0) {
+      pointsToSpend++;
+      player1.isma--;
+    } else if ($(this).val() === "ismaIncr") {
+      pointsToSpend--;
+      player1.isma++;
     }
 
+    // Button disabling function
     if (pointsToSpend <= 0) {
       $(".increase").attr({disabled: true});
     }
@@ -105,22 +128,16 @@ $(document).ready(function(){
       $(".increase").attr({disabled: false});
     }
 
+    // Attributes available for adjustment
     $("#attributePoints1").text(player1.str);
     $("#attributePoints2").text(player1.dex);
     $("#attributePoints3").text(player1.con);
+    $("#attributePoints4").text(player1.int);
+    $("#attributePoints5").text(player1.wis);
+    $("#attributePoints6").text(player1.isma);
 
-    // console.log("dex score " + player1.dex);
+    // console log
     console.log("pointsToSpend " + pointsToSpend);
 
-
-
-    // if (pointsToSpend === 10) {
-    //   $("#nottub").attr('disabled',"true");
-    // }
-    // else if (pointsToSpend >= 1 ) {
-    //     $("#nottub").attr('disabled',"false");
-    // }
   });
-
-
 });

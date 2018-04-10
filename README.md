@@ -2,7 +2,7 @@
 
 #### _A webpage for creating a DnD character_
 
-#### By _**Cameron Button, Jared Lutz, Jesse, Matt Nardoni, John April 9, 2018**_
+#### By _**Cameron Button, Jared Lutz, Matt Nardoni April 9, 2018**_
 
 ## Description
 
@@ -48,4 +48,4 @@ _HTML, CSS, JavaScript, jQuery, and Bootstrap_
 
 *This page is licensed under the MIT license*
 
-Copyright (c) 2018 **_Cameron Button and friends_**
+Copyright (c) 2018 **_Cameron Button, Jared Lutz, and Matt Nardoni_**
