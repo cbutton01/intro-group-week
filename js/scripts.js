@@ -7,35 +7,43 @@ function DiceRoll(sides){
     return DiceRoll(sides);
   }
   return roll;
-  // console.log(roll);
-  // roll = 0;
+
 }
 
-function Player(name){
+
+function Player(name){ //player constructor
   this.name = name;
   this.race = [];
-  this.str = 10;
-  this.dex = 10;
-  this.int = 10;
+  this.class = [];
+  this.str = 10; //strength stat
+  this.dex = 10; //dexterity stat
+  this.int = 10; //intelligence stat
+  this.con = 10; //constitution stat
+  this.wis = 10; //wisdom stat
+  this.isma = 10; //charisma stat
+
+
 }
 
-Player.prototype.raceCheck = function(){
+Player.prototype.raceCheck = function(){ //Checks race and adds stats
   if(this.race.includes("elf")){
-    this.int += 10;
+    this.dex += 2;
   } else if(this.race.includes("human")){
-    this.str += 1; this.dex += 1; this.int += 1;
+    this.str += 1; this.dex += 1; this.int += 1; this.con += 1; this.wis += 1; this.isma += 1;
   } else if(this.race.includes("dwarf")){
-    this.dex += 5;
+    this.str += 2; this.con += 2;
+  } else if(this.race.includes("halfling")){
+    this.dex += 2;
   }
 
 };
 
 //Skills: Athletics, Medicine, Persuasion, Survival
-Player.prototype.modCheck = function(){
-  if(this.skills.includes("medicine") && this.int >= 10){
+Player.prototype.classCheck = function(){
+  if(this.class.includes("wizard") && this.int >= 12 && this.int <= 13){
     roll += 1;
-  } else {
-    return false;
+  } else if (this.int >= 14 && this.int <= 15){
+    roll += 2;
   }
 }
 //front end
