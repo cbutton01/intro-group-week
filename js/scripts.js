@@ -10,6 +10,7 @@ function DiceRoll(sides){
 
 }
 
+
 function Player(name){ //player constructor
   this.name = name;
   this.race = [];
@@ -20,6 +21,7 @@ function Player(name){ //player constructor
   this.con = 10; //constitution stat
   this.wis = 10; //wisdom stat
   this.isma = 10; //charisma stat
+
 
 }
 
@@ -59,22 +61,24 @@ $(document).ready(function(){
   $(".points").click(function(event){
     event.preventDefault();
     if ($(this).val() === "decr") {
-      pointsToSpend--;
-    }
-    if ($(this).val() === "incr") {
       pointsToSpend++;
+      player1.dex--;
     }
-    if (pointsToSpend === 0) {
+    if ($(this).val() === "incr" && pointsToSpend != 10) {
+      pointsToSpend--;
+      player1.dex++;
+    }
+    if (pointsToSpend <= 0) {
       $("#button").attr({disabled: true});
-
     }
     else {
-      console.log(pointsToSpend);
+      $("#button").attr({disabled: false});
     }
-    // else {
-    //   $('#button').attr('disabled','true');
-    // }
-    //console.log(pointsToSpend);
+
+    $("#attributePoints").text(player1.dex);
+
+    console.log("dex score " + player1.dex);
+    console.log("pointsToSpend " + pointsToSpend);
 
 
 
