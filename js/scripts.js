@@ -11,10 +11,10 @@ function DiceRoll(sides){
 }
 
 
-function Player(name){ //player constructor
+function Player(name, race, playerClass){ //player constructor
   this.name = name;
-  this.race = [];
-  this.class = [];
+  this.race = race;
+  this.class = playerClass;
   this.str = 10; //strength stat
   this.dex = 10; //dexterity stat
   this.int = 10; //intelligence stat
