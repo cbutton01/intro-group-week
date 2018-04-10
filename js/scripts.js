@@ -44,23 +44,34 @@ $(document).ready(function(){
 
   });
 
-  $("#button").click(function(event){
+  $(".points").click(function(event){
     event.preventDefault();
-    pointsToSpend--;
-    console.log(pointsToSpend);
+    if ($(this).val() === "decr") {
+      pointsToSpend--;
+    }
+    if ($(this).val() === "incr") {
+      pointsToSpend++;
+    }
     if (pointsToSpend === 0) {
-      $("#button").attr('disabled',"disabled");
-    }else {
-        
+      $("#button").attr({disabled: true});
+
     }
-  })
-  $("#nottub").click(function(event){
-    event.preventDefault();
-    pointsToSpend++;
-    console.log(pointsToSpend);
-    if (pointsToSpend === 10) {
-      $("#nottub").attr('disabled',"disabled");
+    else {
+      console.log(pointsToSpend);
     }
+    // else {
+    //   $('#button').attr('disabled','true');
+    // }
+    //console.log(pointsToSpend);
+
+
+
+    // if (pointsToSpend === 10) {
+    //   $("#nottub").attr('disabled',"true");
+    // }
+    // else if (pointsToSpend >= 1 ) {
+    //     $("#nottub").attr('disabled',"false");
+    // }
   })
 
 
