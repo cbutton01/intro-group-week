@@ -1,3 +1,5 @@
+var player1 = new Player("jared");
+//backend
 function DiceRoll(sides){
   roll = this.roll;
   roll  =  Math.floor(parseInt(Math.random() * (sides +1)));
@@ -9,6 +11,24 @@ function DiceRoll(sides){
   // roll = 0;
 }
 
+function Player(name){
+  this.name = name;
+  this.race = [];
+  this.str = 0;
+  this.dex = 0;
+  this.int = 0;
+}
+
+Player.prototype.newRace = function(){
+  if(this.race.includes("elf")){
+    this.int += 2;
+  }
+
+};
+
+
+
+//front end
 $(document).ready(function(){
   $('#D20').click(function(event){
     event.preventDefault();
