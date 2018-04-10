@@ -33,36 +33,26 @@
             </select>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="card">
-
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card">
-
-            </div>
-          </div>
-        </div>
       </form>
     </div>
     <button id="D20" type="button" name="button" value="20">D20</button>
     <div class="output">
     </div>
-    <button class="points" id="button" type="button" name="button" value="decr">SPEND</button>
-    <br>
-    <button class="points" id="nottub" type="button" name="button" value="incr">RETURN</button>
+    <div class="card card-body stat-box">
+      <div class="row">
+        <div class="col-md">
+          <div class="row">
+            <button class="points" id="nottub" type="button" name="button" value="incr">+</button>
+          </div>
+          <div class="row">
+            <button class="points" id="button" type="button" name="button" value="decr">-</button>
+          </div>
+        </div>
+        <div class="col-md">
+          <span id="attributePoints"></span>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
