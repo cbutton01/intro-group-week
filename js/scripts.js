@@ -12,26 +12,34 @@ function DiceRoll(sides){
 }
 
 function Player(name){
-  this.name = name;
-  this.race = [];
   this.str = 0;
   this.dex = 0;
   this.int = 0;
+  this.name = name;
+  this.race = [];
+  this.skills = [];
+
 }
 
-Player.prototype.newRace = function(){
+Player.prototype.raceCheck = function(){
   if(this.race.includes("elf")){
-    this.int += 2;
-  } else if(this.race.includes("human")) {
+    this.int += 10;
+  } else if(this.race.includes("human")){
     this.str += 1; this.dex += 1; this.int += 1;
   } else if(this.race.includes("dwarf")){
-    this.str += 5;
+    this.dex += 5;
   }
 
 };
 
-
-
+//Skills: Athletics, Medicine, Persuasion, Survival
+Player.prototype.modCheck = function(){
+  if(this.skills.includes("medicine") && this.int >= 10){
+    roll += 1;
+  } else {
+    return false;
+  }
+}
 //front end
 $(document).ready(function(){
   $('#D20').click(function(event){
