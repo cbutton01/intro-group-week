@@ -15,6 +15,7 @@ function Player(name, race, playerClass){ //player constructor
   this.name = name;
   this.race = race;
   this.class = playerClass;
+  this.skills = [];
   this.str = 10; //strength stat
   this.dex = 10; //dexterity stat
   this.int = 10; //intelligence stat
@@ -36,7 +37,16 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
     this.dex += 2;
   }
 
-};
+}
+// pushes profs to empty array. front end can use this empty array to display prof checkboxes.
+Player.prototype.classCheck = function(){
+  if(this.class.includes("rogue")){
+    player1.skills.push("stealth");
+    player1.skills.push("performance");
+    player1.skills.push("deception");
+  }
+}
+
 
 //Checks to see if a stat is above or below a certain number and add a modifier to the players roll
 Player.prototype.strCheck = function(){
