@@ -48,6 +48,9 @@ Player.prototype.classCheck = function(){
 }
 //front end
 $(document).ready(function(){
+  $("#attributePoints1").text(player1.str);
+  $("#attributePoints2").text(player1.dex);
+  $("#attributePoints3").text(player1.con);
   var pointsToSpend = 10;
   $('#D20').click(function(event){
     event.preventDefault();
@@ -60,26 +63,39 @@ $(document).ready(function(){
 
   $(".points").click(function(event){
     event.preventDefault();
-    if ($(this).val() === "decr") {
+
+    if ($(this).val() === "strDecr" && player1.str > 0) {
+      player1.str--;
+      pointsToSpend++;
+    } else if ($(this).val() === "strIncr") {
+      player1.str++;
+      pointsToSpend--;
+    } else if ($(this).val() === "dexDecr" && player1.dex > 0) {
       pointsToSpend++;
       player1.dex--;
-    }
-    if ($(this).val() === "incr" && pointsToSpend != 10) {
+    } else if ($(this).val() === "dexIncr") {
       pointsToSpend--;
       player1.dex++;
+    } else if ($(this).val() === "conDecr" && player1.con > 0) {
+      pointsToSpend++;
+      player1.con--;
+    } else if ($(this).val() === "conIncr") {
+      pointsToSpend--;
+      player1.con++;
     }
+
     if (pointsToSpend <= 0) {
-      $("#button").attr({disabled: true});
+      $(".increase").attr({disabled: true});
     }
     else {
-      $("#button").attr({disabled: false});
+      $(".increase").attr({disabled: false});
     }
 
-    $("#attributePoints1").text(player1.dex);
-    $("#attributePoints2").text(player1.str);
-    $("#attributePoints3").text(player1.int);
+    $("#attributePoints1").text(player1.str);
+    $("#attributePoints2").text(player1.dex);
+    $("#attributePoints3").text(player1.con);
 
-    console.log("dex score " + player1.dex);
+    // console.log("dex score " + player1.dex);
     console.log("pointsToSpend " + pointsToSpend);
 
 
@@ -90,7 +106,7 @@ $(document).ready(function(){
     // else if (pointsToSpend >= 1 ) {
     //     $("#nottub").attr('disabled',"false");
     // }
-  })
+  });
 
 
 });
