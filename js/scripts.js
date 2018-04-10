@@ -22,6 +22,10 @@ function Player(name){
 Player.prototype.newRace = function(){
   if(this.race.includes("elf")){
     this.int += 2;
+  } else if(this.race.includes("human")) {
+    this.str += 1; this.dex += 1; this.int += 1;
+  } else if(this.race.includes("dwarf")){
+    this.str += 5;
   }
 
 };
