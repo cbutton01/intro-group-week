@@ -61,7 +61,9 @@ $(document).ready(function(){
       $("#button").attr({disabled: false});
     }
 
-    $("#attributePoints").text(player1.dex);
+    $("#attributePoints1").text(player1.dex);
+    $("#attributePoints2").text(player1.str);
+    $("#attributePoints3").text(player1.int);
 
     console.log("dex score " + player1.dex);
     console.log("pointsToSpend " + pointsToSpend);
