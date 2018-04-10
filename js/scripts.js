@@ -42,6 +42,7 @@ Player.prototype.modCheck = function(){
 }
 //front end
 $(document).ready(function(){
+  var pointsToSpend = 10;
   $('#D20').click(function(event){
     event.preventDefault();
     var dice = parseInt($('#D20').val());
@@ -50,4 +51,36 @@ $(document).ready(function(){
     console.log(dieResult);
 
   });
+
+  $(".points").click(function(event){
+    event.preventDefault();
+    if ($(this).val() === "decr") {
+      pointsToSpend--;
+    }
+    if ($(this).val() === "incr") {
+      pointsToSpend++;
+    }
+    if (pointsToSpend === 0) {
+      $("#button").attr({disabled: true});
+
+    }
+    else {
+      console.log(pointsToSpend);
+    }
+    // else {
+    //   $('#button').attr('disabled','true');
+    // }
+    //console.log(pointsToSpend);
+
+
+
+    // if (pointsToSpend === 10) {
+    //   $("#nottub").attr('disabled',"true");
+    // }
+    // else if (pointsToSpend >= 1 ) {
+    //     $("#nottub").attr('disabled',"false");
+    // }
+  })
+
+
 });
