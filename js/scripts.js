@@ -195,6 +195,7 @@ $(document).ready(function(){
   $("#attributePoints6").text(player1.isma);
   var pointsToSpend = 10;
   var skillsToSpend = 2;
+  $("#attPoints").text(pointsToSpend);
 
   $('#D20').click(function(event){
     event.preventDefault();
@@ -291,6 +292,7 @@ $(document).ready(function(){
   })
   $("#char-sheet").submit(function(event){
     event.preventDefault();
+    $('#toHide').hide();
     player1.name = $("#playerName").val();
     player1.race = $("#race-select").val();
     player1.playerClass = $("#class-select").val();
@@ -301,5 +303,6 @@ $(document).ready(function(){
     $("#attributePoints4").text(player1.int);
     $("#attributePoints5").text(player1.wis);
     $("#attributePoints6").text(player1.isma);
+    $("#attPoints").text(pointsToSpend);
   });
 });
