@@ -196,6 +196,10 @@ $(document).ready(function(){
   var pointsToSpend = 10;
   var skillsToSpend = 2;
   $("#attPoints").text(pointsToSpend);
+  $(".wizard").hide();
+  $(".fighter").hide();
+  $(".ranger").hide();
+  $(".rogue").hide();
 
   $('#D20').click(function(event){
     event.preventDefault();
@@ -293,21 +297,14 @@ $(document).ready(function(){
     player1.playerClass = $("#class-select").val();
     player1.raceCheck();
     if(player1.playerClass.includes("rogue")){
-      $(".wizard").hide();
-      $(".fighter").hide();
-      $(".ranger").hide();
+      $(".rogue").show();
     } else if(player1.playerClass.includes("wizard")){
-      $(".rogue").hide();
-      $(".fighter").hide();
-      $(".ranger").hide();
+      $(".wizard").show();
     } else if(player1.playerClass.includes("fighter")){
-      $(".wizard").hide();
-      $(".rogue").hide();
-      $(".ranger").hide();
+      $(".fighter").show();
     } else if(player1.playerClass.includes("ranger")){
-      $(".wizard").hide();
-      $(".fighter").hide();
-      $(".rogue").hide();
+      $(".ranger").show();
+
     }
 
     if (player1.race.includes("human")) {
