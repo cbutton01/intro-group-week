@@ -14,3 +14,7 @@ button {
 #humanLore, #dwarfLore, #elfLore, #halflingLore {
   display: none;
 }
+
+.D20 {
+  float: right;
+}

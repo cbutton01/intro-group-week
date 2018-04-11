@@ -196,7 +196,7 @@ $(document).ready(function(){
   $("#attributePoints6").text(player1.isma);
   var pointsToSpend = 10;
   var skillsToSpend = 2;
-  $("#attPoints").text(pointsToSpend);
+  $("#attPoints").text("Points remaining: " + pointsToSpend);
 
   $('#D20').click(function(event){
     event.preventDefault();
@@ -264,7 +264,7 @@ $(document).ready(function(){
     $("#attributePoints4").text(player1.int);
     $("#attributePoints5").text(player1.wis);
     $("#attributePoints6").text(player1.isma);
-    $("#attPoints").text(pointsToSpend);
+    $("#attPoints").text("Points remaining: " + pointsToSpend);
     // console log
     console.log("pointsToSpend " + pointsToSpend);
 
@@ -290,6 +290,7 @@ $(document).ready(function(){
     event.preventDefault();
     $('#toHide').hide();
     player1.name = $("#playerName").val();
+    $("#playerName").attr({disabled: true});
     player1.race = $("#race-select").val();
     player1.playerClass = $("#class-select").val();
     player1.raceCheck();
@@ -327,6 +328,6 @@ $(document).ready(function(){
     $("#attributePoints4").text(player1.int);
     $("#attributePoints5").text(player1.wis);
     $("#attributePoints6").text(player1.isma);
-    $("#attPoints").text(pointsToSpend);
+    $("#attPoints").text("Points remaining: " + pointsToSpend);
   });
 });
