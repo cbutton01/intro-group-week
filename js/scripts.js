@@ -42,7 +42,7 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
   } else if(this.race.includes("human")){
     this.str += 1; this.dex += 1; this.int += 1; this.con += 1; this.wis += 1; this.isma += 1;
   } else if(this.race.includes("dwarf")){
-    this.str += 2; this.con += 2;
+    this.str += 2; this.con += 20;
   } else if(this.race.includes("halfling")){
     this.dex += 2;
   }
@@ -54,6 +54,18 @@ Player.prototype.classCheck = function(){
     player1.skills.push("stealth");
     player1.skills.push("performance");
     player1.skills.push("deception");
+  } else if(this.class.includes("fighter")){
+    player1.skills.push("acrobatics");
+    player1.skills.push("survival");
+    player1.skills.push("intimidation");
+  } else if(this.class.includes("wizard")){
+    player1.skills.push("arcana");
+    player1.skills.push("medicine");
+    player1.skills.push("religion");
+  } else if(this.class.includes("ranger")){
+    player1.skills.push("nature");
+    player1.skills.push("animal handling");
+    player1.skills.push("investigation");
   }
 }
 
