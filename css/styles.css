@@ -10,3 +10,7 @@ button {
 .stat-box {
   width: 110px;
 }
+
+#humanLore, #dwarfLore, #elfLore, #halflingLore {
+  display: none;
+}

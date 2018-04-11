@@ -224,6 +224,8 @@ $(document).ready(function(){
     $('.output').text(dieResult);
     console.log(dieResult);
 
+    $("#dwarfLore").show();
+
   });
 
   //Point/buy system for attributes
