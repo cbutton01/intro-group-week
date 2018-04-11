@@ -14,6 +14,11 @@ button {
 #humanLore, #dwarfLore, #elfLore, #halflingLore {
   display: none;
 }
+
 #rollButtons button{
   display: none;
+}
+
+.D20 {
+  float: right;
 }
