@@ -6,18 +6,7 @@ function DiceRoll(sides){
     return DiceRoll(sides);
   }
   return roll;
-
 }
-
-// function Skill (prof, mod) {
-//   this.prof = prof;
-//   this.mod = mod;
-//
-// }
-// Skill.prototype.skillCheck = function(){
-//   if(this.prof === 2){
-// }}
-
 
 function Player(name, race, playerClass){ //player constructor
   this.name = name;
@@ -30,8 +19,6 @@ function Player(name, race, playerClass){ //player constructor
   this.con = 10; //constitution stat
   this.wis = 10; //wisdom stat
   this.isma = 10; //charisma stat
-
-
 }
 
 Player.prototype.raceCheck = function(){ //Checks race and adds stats
@@ -46,7 +33,6 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
   }
 
 }
-
 
 //Checks to see if a stat is above or below a certain number and add a modifier to the players roll
 Player.prototype.strCheck = function(){
@@ -181,10 +167,7 @@ Player.prototype.ismaCheck = function(){
   }
 }
 
-
-// var stealth = new Skill(2, mod);
 var player1 = new Player(name);
-
 //front end
 $(document).ready(function(){
   $("#attributePoints1").text(player1.str);
@@ -200,6 +183,9 @@ $(document).ready(function(){
   $(".fighter").hide();
   $(".ranger").hide();
   $(".rogue").hide();
+  if(pointsToSpend > 0){
+    $("#toHide").attr({disabled: true});
+  }
 
   $('#D20').click(function(event){
     event.preventDefault();
@@ -212,8 +198,7 @@ $(document).ready(function(){
   //Point/buy system for attributes
   $(".points").click(function(event){
     event.preventDefault();
-
-    if ($(this).val() === "strDecr" && player1.str > 0) {
+      if ($(this).val() === "strDecr" && player1.str > 0) {
       player1.str--;
       pointsToSpend++;
     } else if ($(this).val() === "strIncr") {
@@ -259,7 +244,6 @@ $(document).ready(function(){
       $(".increase").attr({disabled: false});
     }
 
-
     // Attributes available for adjustment
     $("#attributePoints1").text(player1.str);
     $("#attributePoints2").text(player1.dex);
@@ -267,12 +251,17 @@ $(document).ready(function(){
     $("#attributePoints4").text(player1.int);
     $("#attributePoints5").text(player1.wis);
     $("#attributePoints6").text(player1.isma);
-    $("#attPoints").text("Points remaining: " + pointsToSpend);
+    $("#attPoints").text(pointsToSpend);
     // console log
-    console.log("pointsToSpend " + pointsToSpend);
+    console.log(pointsToSpend);
 
   });
 
+    $("#statConfirm").click(function(){
+      if(pointsToSpend === 0){
+        $("#toHide").attr({disabled: false});
+      }
+    });
 
     $(".skillBox").click(function(event){
       if ($(this).is(":not(:checked)")) {
@@ -324,6 +313,13 @@ $(document).ready(function(){
     $("#attributePoints4").text(player1.int);
     $("#attributePoints5").text(player1.wis);
     $("#attributePoints6").text(player1.isma);
-    $("#attPoints").text("Points remaining: " + pointsToSpend);
+    $("#attPoints").text(pointsToSpend);
+  });
+
+  $("#confirmSkill").click(function(){
+    if("[name:skills]:checked" && skillsToSpend === 0){
+      $(".skillBox").hide();
+      $("#rollButtons button").show();
+    }
   });
 });
