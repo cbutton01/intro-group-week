@@ -9,14 +9,14 @@ function DiceRoll(sides){
 
 }
 
-function Skill (prof, mod) {
-  this.prof = prof;
-  this.mod = mod;
-
-}
-Skill.prototype.skillCheck = function(){
-  if(this.prof === 2){
-}}
+// function Skill (prof, mod) {
+//   this.prof = prof;
+//   this.mod = mod;
+//
+// }
+// Skill.prototype.skillCheck = function(){
+//   if(this.prof === 2){
+// }}
 
 
 function Player(name, race, playerClass){ //player constructor
@@ -46,7 +46,6 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
   }
 
 }
-
 
 
 //Checks to see if a stat is above or below a certain number and add a modifier to the players roll
