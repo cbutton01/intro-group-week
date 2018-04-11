@@ -287,7 +287,9 @@ $(document).ready(function(){
         skillsToSpend--;
       }
       if(skillsToSpend === 0){
-        $(':not(checked)').attr({disabled: true});
+        $('[name=skills]:not(:checked)').attr({disabled: true});
+      } else if(skillsToSpend > 0){
+        $('[name=skills]:not(:checked)').attr({disabled: false});
       }
       console.log(skillsToSpend);
   })
