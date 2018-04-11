@@ -267,7 +267,7 @@ $(document).ready(function(){
     $("#attributePoints4").text(player1.int);
     $("#attributePoints5").text(player1.wis);
     $("#attributePoints6").text(player1.isma);
-
+    $("#attPoints").text(pointsToSpend);
     // console log
     console.log("pointsToSpend " + pointsToSpend);
 
