@@ -185,6 +185,7 @@ Player.prototype.ismaCheck = function(){
 
 // var stealth = new Skill(2, mod);
 var player1 = new Player(name);
+
 //front end
 $(document).ready(function(){
   $("#attributePoints1").text(player1.str);
@@ -271,9 +272,7 @@ $(document).ready(function(){
     console.log("pointsToSpend " + pointsToSpend);
 
   });
-  if(player1.playerClass === "rogue"){
-    $(".wizard").attr({disabled: true});
-  }
+
 
     $(".skillBox").click(function(event){
       if ($(this).is(":not(:checked)")) {
@@ -297,6 +296,23 @@ $(document).ready(function(){
     player1.race = $("#race-select").val();
     player1.playerClass = $("#class-select").val();
     player1.raceCheck();
+    if(player1.playerClass.includes("rogue")){
+      $(".wizard").hide();
+      $(".fighter").hide();
+      $(".ranger").hide();
+    } else if(player1.playerClass.includes("wizard")){
+      $(".rogue").hide();
+      $(".fighter").hide();
+      $(".ranger").hide();
+    } else if(player1.playerClass.includes("fighter")){
+      $(".wizard").hide();
+      $(".rogue").hide();
+      $(".ranger").hide();
+    } else if(player1.playerClass.includes("ranger")){
+      $(".wizard").hide();
+      $(".fighter").hide();
+      $(".rogue").hide();
+    }
     $("#attributePoints1").text(player1.str);
     $("#attributePoints2").text(player1.dex);
     $("#attributePoints3").text(player1.con);
