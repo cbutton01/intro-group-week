@@ -24,7 +24,17 @@ _This is a webpage where a user may create and customize a DnD character._
 //elfs get a dex + 2
 //halflings dex +2
 
-
+//stealth:dex
+//performance:char
+//insight:wis
+//arcana:int
+//medicine:wis
+//religion:int
+//investigation:int
+//nature:int
+//survival:wis
+//athletics:str
+//intimidation:char
 
 ## Setup/Installation Requirements
 

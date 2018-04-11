@@ -36,8 +36,8 @@
         </div>
       </form>
       <br>
-      <p>Ability points left</p>
-      <span id="attPoints"></span>
+      <button type="button" name="statConfirm" id="statConfirm">Confirm</button>
+      <p>Ability points left: <span id="attPoints"></span></p>
       <div class="row">
         <div class="col-md">
           <div class="card stat-box">
@@ -185,8 +185,11 @@
             </div>
           </div>
         </div>
-        <div id="rollButtons"class="col-md">
-          <div class="card">
+        <div class="col-md">
+          <div id="confirmSkill">
+            <button type="button" name="skillConfirm">Confirm Skills</button>
+          </div>
+          <div id="rollButtons" class="card">
             <div><input class="skillBox rogue" type="checkbox" name="skills" value="stealth"> Stealth <button class="D20" type="button" name="button" value="20">D20</button></div>
             <div><input class="skillBox rogue" type="checkbox" name="skills" value="performance"> Performance <button class="D20" type="button" name="button" value="20">D20</button></div>
             <div><input class="skillBox rogue" type="checkbox" name="skills" value="insight"> Insight <button class="D20" type="button" name="button" value="20">D20</button></div>
