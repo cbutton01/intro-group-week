@@ -1,5 +1,6 @@
 //backend
 var player1 = new Player("jared");
+player1.skills = ['night vision', 'great dancer']
 function DiceRoll(sides){
   roll = this.roll;
   roll  =  Math.floor(parseInt(Math.random() * (sides +1)));
@@ -9,6 +10,15 @@ function DiceRoll(sides){
   return roll;
 
 }
+
+function Skill (prof, mod) {
+  this.prof = prof;
+  this.mod = mod;
+
+}
+Skill.prototype.skillCheck = function(){
+  if(this.prof === 2){
+}}
 
 
 function Player(name, race, playerClass){ //player constructor
@@ -180,6 +190,10 @@ Player.prototype.ismaCheck = function(){
     roll += 4;
   }
 }
+
+
+// var stealth = new Skill(2, mod);
+
 //front end
 $(document).ready(function(){
   $("#attributePoints1").text(player1.str);
@@ -189,6 +203,8 @@ $(document).ready(function(){
   $("#attributePoints5").text(player1.wis);
   $("#attributePoints6").text(player1.isma);
   var pointsToSpend = 10;
+  var skillsToSpend = 2;
+
   $('#D20').click(function(event){
     event.preventDefault();
     var dice = parseInt($('#D20').val());
@@ -248,6 +264,7 @@ $(document).ready(function(){
       $(".increase").attr({disabled: false});
     }
 
+
     // Attributes available for adjustment
     $("#attributePoints1").text(player1.str);
     $("#attributePoints2").text(player1.dex);
@@ -260,4 +277,18 @@ $(document).ready(function(){
     console.log("pointsToSpend " + pointsToSpend);
 
   });
+
+    $(".skillBox").click(function(event){
+      if ($(this).is(":not(:checked)")) {
+        skillsToSpend++;
+
+      }
+      if($(this).is(':checked') && skillsToSpend > 0){
+        skillsToSpend--;
+      }
+      if(skillsToSpend === 0){
+        $(':not(checked)').attr({disabled: true});
+      }
+      console.log(skillsToSpend);
+  })
 });
