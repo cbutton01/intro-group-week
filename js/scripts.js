@@ -1,6 +1,4 @@
 //backend
-var player1 = new Player("jared");
-player1.skills = ['night vision', 'great dancer']
 function DiceRoll(sides){
   roll = this.roll;
   roll  =  Math.floor(parseInt(Math.random() * (sides +1)));
@@ -24,7 +22,7 @@ Skill.prototype.skillCheck = function(){
 function Player(name, race, playerClass){ //player constructor
   this.name = name;
   this.race = race;
-  this.class = playerClass;
+  this.playerClass = playerClass;
   this.skills = [];
   this.str = 10; //strength stat
   this.dex = 10; //dexterity stat
@@ -48,26 +46,7 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
   }
 
 }
-// pushes profs to empty array. front end can use this empty array to display prof checkboxes.
-Player.prototype.classCheck = function(){
-  if(this.class.includes("rogue")){
-    player1.skills.push("stealth");
-    player1.skills.push("performance");
-    player1.skills.push("deception");
-  } else if(this.class.includes("fighter")){
-    player1.skills.push("acrobatics");
-    player1.skills.push("survival");
-    player1.skills.push("intimidation");
-  } else if(this.class.includes("wizard")){
-    player1.skills.push("arcana");
-    player1.skills.push("medicine");
-    player1.skills.push("religion");
-  } else if(this.class.includes("ranger")){
-    player1.skills.push("nature");
-    player1.skills.push("animal handling");
-    player1.skills.push("investigation");
-  }
-}
+
 
 
 //Checks to see if a stat is above or below a certain number and add a modifier to the players roll
@@ -205,7 +184,7 @@ Player.prototype.ismaCheck = function(){
 
 
 // var stealth = new Skill(2, mod);
-
+var player1 = new Player(name);
 //front end
 $(document).ready(function(){
   $("#attributePoints1").text(player1.str);
@@ -291,6 +270,9 @@ $(document).ready(function(){
     console.log("pointsToSpend " + pointsToSpend);
 
   });
+  if(player1.playerClass === "rogue"){
+    $(".wizard").attr({disabled: true});
+  }
 
     $(".skillBox").click(function(event){
       if ($(this).is(":not(:checked)")) {
@@ -301,8 +283,23 @@ $(document).ready(function(){
         skillsToSpend--;
       }
       if(skillsToSpend === 0){
-        $(':not(checked)').attr({disabled: true});
+        $('[name=skills]:not(:checked)').attr({disabled: true});
+      } else if(skillsToSpend > 0){
+        $('[name=skills]:not(:checked)').attr({disabled: false});
       }
       console.log(skillsToSpend);
   })
+  $("#char-sheet").submit(function(event){
+    event.preventDefault();
+    player1.name = $("#playerName").val();
+    player1.race = $("#race-select").val();
+    player1.playerClass = $("#class-select").val();
+    player1.raceCheck();
+    $("#attributePoints1").text(player1.str);
+    $("#attributePoints2").text(player1.dex);
+    $("#attributePoints3").text(player1.con);
+    $("#attributePoints4").text(player1.int);
+    $("#attributePoints5").text(player1.wis);
+    $("#attributePoints6").text(player1.isma);
+  });
 });

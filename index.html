@@ -14,23 +14,24 @@
       <form id="char-sheet" action="index.html" method="post">
         <div class="row">
           <div class="col-md-4">
-            <input type="text" name="playerName" placeholder="Player Name">
+            <input id="playerName" type="text" name="playerName" placeholder="Player Name">
           </div>
           <div class="col-md-4">
             <select id="race-select" name="">
-              <option value="">Human</option>
-              <option value="">Elf</option>
-              <option value="">Dwarf</option>
-              <option value="">Halfling</option>
+              <option value="human">Human</option>
+              <option value="elf">Elf</option>
+              <option value="dwarf">Dwarf</option>
+              <option value="halfling">Halfling</option>
             </select>
           </div>
           <div class="col-md-4">
             <select id="class-select" placeholder="Choose a class">
-              <option value="">Rogue</option>
-              <option value="">Fighter</option>
-              <option value="">Wizard</option>
-              <option value="">Ranger</option>
+              <option value="rogue">Rogue</option>
+              <option value="fighter">Fighter</option>
+              <option value="wizard">Wizard</option>
+              <option value="ranger">Ranger</option>
             </select>
+            <button type="submit" name="button">Confirm</button>
           </div>
         </div>
       </form>
@@ -169,9 +170,12 @@
     </div>
     <br>
     <div>
-      <input class="skillBox" type="checkbox" name="skills" value=""> stealth
-      <input class="skillBox" type="checkbox" name="skills" value=""> performance
-      <input class="skillBox" type="checkbox" name="skills" value=""> Insight
+      <input class="skillBox rogue" type="checkbox" name="skills" value="stealth"> Stealth
+      <input class="skillBox rogue" type="checkbox" name="skills" value="performance"> Performance
+      <input class="skillBox rogue" type="checkbox" name="skills" value="insight"> Insight
+      <input class="skillBox wizard" type="checkbox" name="skills" value="arcana"> Arcana
+      <input class="skillBox wizard" type="checkbox" name="skills" value="medicine"> Medicine
+      <input class="skillBox wizard" type="checkbox" name="skills" value="religion"> Religion
     </div>
     <br>
     <button id="D20" type="button" name="button" value="20">D20</button>
