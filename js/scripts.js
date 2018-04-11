@@ -204,9 +204,6 @@ $(document).ready(function(){
     var dieResult = DiceRoll(dice);
     $('.output').text(dieResult);
     console.log(dieResult);
-
-    $("#dwarfLore").show();
-
   });
 
   //Point/buy system for attributes
@@ -313,6 +310,17 @@ $(document).ready(function(){
       $(".fighter").hide();
       $(".rogue").hide();
     }
+
+    if (player1.race.includes("human")) {
+      $("#humanLore").show();
+    } else if (player1.race.includes("dwarf")) {
+      $("#dwarfLore").show();
+    } else if (player1.race.includes("elf")) {
+      $("#elfLore").show();
+    } else if (player1.race.includes("halfling")){
+      $("#halflingLore").show();
+    }
+
     $("#attributePoints1").text(player1.str);
     $("#attributePoints2").text(player1.dex);
     $("#attributePoints3").text(player1.con);
