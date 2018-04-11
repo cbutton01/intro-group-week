@@ -1,9 +1,9 @@
 //backend
-function DiceRoll(sides){
+function diceRoll(sides){
   roll = this.roll;
   roll  =  Math.floor(parseInt(Math.random() * (sides +1)));
   if(this.roll === 0){
-    return DiceRoll(sides);
+    return diceRoll(sides);
   }
   return roll;
 }
@@ -190,7 +190,7 @@ $(document).ready(function(){
   $('#D20').click(function(event){
     event.preventDefault();
     var dice = parseInt($('#D20').val());
-    var dieResult = DiceRoll(dice);
+    var dieResult = diceRoll(dice);
     $('.output').text(dieResult);
     console.log(dieResult);
   });
