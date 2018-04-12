@@ -8,6 +8,10 @@ img {
   border-radius: 50%;
 }
 
+.container-fluid{
+  max-width: 1300px;
+  min-width: 1300px;
+}
 .card {
   padding: 10px;
   border: solid black 3px;
