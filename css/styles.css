@@ -1,13 +1,21 @@
 body {
-  background-color: cornsilk;
+  background-image: url("../img/bgStone.jpg");
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .card {
   padding: 10px;
+  border: solid black 3px;
 }
 
 .stat-box {
   width: 110px;
+  background-image: url("../img/paper.jpg");
 }
 
 #humanLore, #dwarfLore, #elfLore, #halflingLore {
@@ -28,6 +36,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px;
   line-height: 50px;
+  background-image: url("../img/paper.jpg");
 }
 
 .points {
