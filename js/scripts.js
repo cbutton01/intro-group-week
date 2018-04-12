@@ -187,9 +187,9 @@ $(document).ready(function(){
     $("#toHide").attr({disabled: true});
   }
 
-  $('#D20').click(function(event){
+  $('.D20').click(function(event){
     event.preventDefault();
-    var dice = parseInt($('#D20').val());
+    var dice = parseInt($('.D20').val());
     var dieResult = diceRoll(dice);
     $('.output').text(dieResult);
     console.log(dieResult);
