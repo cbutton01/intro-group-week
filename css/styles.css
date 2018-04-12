@@ -15,6 +15,9 @@ img {
 .card-background{
   background-size: cover;
   background-position: center;
+  border-style: outset;
+  border-width: thick;
+  background-color: #e2cb76;
 
 }
 
@@ -63,7 +66,9 @@ img {
 .dice-title {
   text-align: center;
 }
-
+.diceCard{
+  background-color: silver;
+}
 .output {
   display: flex;
   justify-content: center;
