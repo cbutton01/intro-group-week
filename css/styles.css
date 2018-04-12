@@ -12,6 +12,11 @@ img {
   padding: 10px;
   border: solid black 3px;
 }
+.card-background{
+  background-size: cover;
+  background-position: center;
+
+}
 
 .stat-box {
   width: 110px;
@@ -50,7 +55,9 @@ img {
   justify-content: center;
   align-items: center;
 }
-
+.modOutput{
+  padding-left: 40%;
+}
 .dri {
   padding-top: 1px;
   padding-bottom: 1px;

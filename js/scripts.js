@@ -234,10 +234,12 @@ $(document).ready(function(){
       roll += 2;
       player1.ismaCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.ismaCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -250,10 +252,12 @@ $(document).ready(function(){
       roll += 2;
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -266,10 +270,12 @@ $(document).ready(function(){
       roll += 2;
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -282,10 +288,12 @@ $(document).ready(function(){
       roll += 2;
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -298,10 +306,12 @@ $(document).ready(function(){
       roll += 2;
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -314,10 +324,12 @@ $(document).ready(function(){
       roll += 2;
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -330,10 +342,12 @@ $(document).ready(function(){
       roll += 2;
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.intCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -346,10 +360,12 @@ $(document).ready(function(){
       roll += 2;
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -362,10 +378,12 @@ $(document).ready(function(){
       roll += 2;
       player1.strCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.strCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -378,10 +396,12 @@ $(document).ready(function(){
       roll += 2;
       player1.ismaCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.ismaCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -394,10 +414,12 @@ $(document).ready(function(){
       roll += 2;
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.wisCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
@@ -497,7 +519,7 @@ $(document).ready(function(){
     if(player1.playerClass.includes("rogue")){
       $(".rogue").show();
       $("#rogue").show();
-      $(".card-background").css('background-image', "url(..img/tunnel.jpeg)");
+      $(".card-background").css('background-image', "url(../intro-group-week/img/tunnel.jpeg)");
     } else if(player1.playerClass.includes("wizard")){
       $(".wizard").show();
       $("#wizard").show();
