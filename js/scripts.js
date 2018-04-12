@@ -194,7 +194,8 @@ $(document).ready(function(){
   //   $('.output').text(dieResult);
   //   console.log(dieResult);
   // });
-
+  
+//all 12 dice roll buttons
   $(".stealthD20").click(function(event){
     event.preventDefault();
     var dice = parseInt($(".stealthD20").val());
