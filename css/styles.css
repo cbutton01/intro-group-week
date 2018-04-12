@@ -20,6 +20,7 @@ body {
 
 #rollButtons  button{
   float: right;
+  display: none;
 }
 
 
@@ -31,8 +32,8 @@ body {
 
 .points {
   margin-left: 20px;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 
 }
 
