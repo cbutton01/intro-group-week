@@ -12,6 +12,7 @@ function Player(name, race, playerClass){ //player constructor
   this.name = name;
   this.race = race;
   this.playerClass = playerClass;
+  this.mod = 0;
   this.str = 10; //strength stat
   this.dex = 10; //dexterity stat
   this.int = 10; //intelligence stat
@@ -36,133 +37,144 @@ Player.prototype.raceCheck = function(){ //Checks race and adds stats
 //Checks to see if a stat is above or below a certain number and add a modifier to the players roll
 Player.prototype.strCheck = function(){
   if(this.str <= 1){
-    roll -= 5;
+    roll -= 5; mod = -5;
   } else if (this.str >= 2 && this.str <= 3){
-    roll -= 4;
+    roll -= 4; mod = -4;
   } else if (this.str >= 4 && this.str <= 5){
-    roll -= 3;
+    roll -= 3; mod = -3;
   } else if (this.str >= 6 && this.str <= 7){
-    roll -= 2;
+    roll -= 2; mod = -2;
   } else if (this.str >= 8 && this.str <= 9){
-    roll -= 1;
+    roll -= 1; mod = -1;
+  } else if (this.str >= 10 && this.str <= 11){
+    mod = 0;
   } else if (this.str >= 12 && this.str <= 13){
-    roll += 1;
+    roll += 1; mod = 1;
   } else if (this.str >= 14 && this.str <= 15){
-    roll += 2;
+    roll += 2; mod = 2;
   } else if (this.str >= 16 && this.str <= 17){
-    roll += 3;
+    roll += 3; mod = 3;
   } else if (this.str > 17){
-    roll += 4;
+    roll += 4; mod = 4;
   }
 }
 
 Player.prototype.dexCheck = function(){
-  if(this.dex <= 1){
-    roll -= 5;
+  if(this.dex <= 1){ -5;
   } else if (this.dex >= 2 && this.dex <= 3){
-    roll -= 4;
+    roll -= 4; mod = -4;
   } else if (this.dex >= 4 && this.dex <= 5){
-    roll -= 3;
+    roll -= 3; mod = -3;
   } else if (this.dex >= 6 && this.dex <= 7){
-    roll -= 2;
+    roll -= 2; mod = -2;
   } else if (this.dex >= 8 && this.dex <= 9){
-    roll -= 1;
+    roll -= 1; mod = -1;
+  } else if (this.dex >= 10 && this.dex <= 11){
+    mod = 0;
   } else if (this.dex >= 12 && this.dex <= 13){
-    roll += 1;
+    roll += 1; mod = 1;
   } else if (this.dex >= 14 && this.dex <= 15){
-    roll += 2;
+    roll += 2; mod = 2;
   } else if (this.dex >= 16 && this.dex <= 17){
-    roll += 3;
+    roll += 3; mod = 3;
   } else if (this.dex > 17){
-    roll += 4;
+    roll += 4; mod = 4;
   }
 }
 
 Player.prototype.intCheck = function(){
   if(this.int <= 1){
-    roll -= 5;
+    roll -= 5; mod = -5;
   } else if (this.int >= 2 && this.int <= 3){
-    roll -= 4;
+    roll -= 4; mod = -4;
   } else if (this.int >= 4 && this.int <= 5){
-    roll -= 3;
+    roll -= 3; mod = -3;
   } else if (this.int >= 6 && this.int <= 7){
-    roll -= 2;
+    roll -= 2; mod = -2;
   } else if (this.int >= 8 && this.int <= 9){
-    roll -= 1;
+    roll -= 1; mod = -1;
+  } else if (this.int >= 10 && this.int <= 11){
+    mod = 0;
   } else if (this.int >= 12 && this.int <= 13){
-    roll += 1;
+    roll += 1; mod = 1;
   } else if (this.int >= 14 && this.int <= 15){
-    roll += 2;
+    roll += 2; mod = 2;
   } else if (this.int >= 16 && this.int <= 17){
-    roll += 3;
+    roll += 3; mod = 3;
   } else if (this.int > 17){
-    roll += 4;
+    roll += 4; mod = 4;
   }
 }
 
 Player.prototype.conCheck = function(){
   if(this.con <= 1){
-    roll -= 5;
+    roll -= 5; mod = -5;
   } else if (this.con >= 2 && this.con <= 3){
-    roll -= 4;
+    roll -= 4; mod = -4;
   } else if (this.con >= 4 && this.con <= 5){
-    roll -= 3;
+    roll -= 3; mod = -3;
   } else if (this.con >= 6 && this.con <= 7){
-    roll -= 2;
+    roll -= 2; mod = -2;
   } else if (this.con >= 8 && this.con <= 9){
-    roll -= 1;
+    roll -= 1; mod = -1;
+  } else if (this.con >= 10 && this.con <= 11){
+    mod = 0;
   } else if (this.con >= 12 && this.con <= 13){
-    roll += 1;
+    roll += 1; mod = 1;
   } else if (this.con >= 14 && this.con <= 15){
-    roll += 2;
+    roll += 2; mod = 2;
   } else if (this.con >= 16 && this.con <= 17){
-    roll += 3;
+    roll += 3; mod = 3;
   } else if (this.con > 17){
-    roll += 4;
+    roll += 4; mod = 4;
   }
 }
 
 Player.prototype.wisCheck = function(){
   if(this.wis <= 1){
-    roll -= 5;
+    roll -= 5; mod = -5;
   } else if (this.wis >= 2 && this.wis <= 3){
-    roll -= 4;
+    roll -= 4; mod = -4;
   } else if (this.wis >= 4 && this.wis <= 5){
-    roll -= 3;
+    roll -= 3; mod = -3;
   } else if (this.wis >= 6 && this.wis <= 7){
-    roll -= 2;
+    roll -= 2; mod = -2;
   } else if (this.wis >= 8 && this.wis <= 9){
-    roll -= 1;
+    roll -= 1; mod = -1;
+  } else if (this.wis >= 10 && this.wis <= 11){
+    mod = 0;
   } else if (this.wis >= 12 && this.wis <= 13){
-    roll += 1;
+    roll += 1; mod = 1;
   } else if (this.wis >= 14 && this.wis <= 15){
-    roll += 2;
+    roll += 2; mod = 2;
   } else if (this.wis >= 16 && this.wis <= 17){
-    roll += 3;
+    roll += 3; mod = 3;
   } else if (this.wis > 17){
-    roll += 4;
+    roll += 4; mod = 4;
   }
 }
 
 Player.prototype.ismaCheck = function(){
   if(this.isma <= 1){
-    roll -= 5;
+    roll -= 5; mod = -5;
   } else if (this.isma >= 2 && this.isma <= 3){
-    roll -= 4;
+    roll -= 4; mod = -4;
   } else if (this.isma >= 4 && this.isma <= 5){
-    roll -= 3;
+    roll -= 3; mod = -3;
   } else if (this.isma >= 6 && this.isma <= 7){
-    roll -= 2;
+    roll -= 2; mod = -2;
   } else if (this.isma >= 8 && this.isma <= 9){
-    roll -= 1;
+    roll -= 1; mod = -1;
+  } else if (this.isma >= 10 && this.isma <= 11){
+    mod = 0;
   } else if (this.isma >= 12 && this.isma <= 13){
-    roll += 1;
+    roll += 1; mod = 1;
   } else if (this.isma >= 14 && this.isma <= 15){
-    roll += 2;
+    roll += 2; mod = 2;
   } else if (this.isma >= 16 && this.isma <= 17){
-    roll += 3;
+    roll += 3; mod = 3;
   } else if (this.isma > 17){
-    roll += 4;
+    roll += 4; mod = 4;
   }
 }
 
