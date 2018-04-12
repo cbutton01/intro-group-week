@@ -16,14 +16,11 @@ button {
 }
 
 #rollButtons button{
-  display: none;
+  float: right;
+  display:
 }
 #rollButtons{
   padding-top: 20px;
   padding-bottom: 20px;
   line-height: 50px;
-}
-
-.D20 {
-  float: right;
 }
