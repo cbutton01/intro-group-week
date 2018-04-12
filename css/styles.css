@@ -39,6 +39,23 @@ img {
   background-image: url("../img/paper.jpg");
 }
 
+#leftDragon, #rightDragon {
+  height: 80px;
+  width: 60px;
+
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dri {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
 .points {
   margin-left: 20px;
   height: 25px;

@@ -482,7 +482,7 @@ $(document).ready(function(){
     if(player1.playerClass.includes("rogue")){
       $(".rogue").show();
       $("#rogue").show();
-      // $(".card-background").css('background-image', "url(..img/tunnel.jpeg)");
+      $(".card-background").css('background-image', "url(..img/tunnel.jpeg)");
     } else if(player1.playerClass.includes("wizard")){
       $(".wizard").show();
       $("#wizard").show();
