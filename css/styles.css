@@ -67,9 +67,15 @@ img {
   margin-left: 20px;
   height: 25px;
   width: 25px;
-
 }
-
+#race-select{
+  background-color: black;
+  color: white;
+}
+#class-select{
+  background-color: black;
+  color: white;
+}
 #statConfirm {
   float: left;
   width: 100px;
