@@ -481,12 +481,16 @@ $(document).ready(function(){
     player1.raceCheck();
     if(player1.playerClass.includes("rogue")){
       $(".rogue").show();
+      $("#rogue").show();
     } else if(player1.playerClass.includes("wizard")){
       $(".wizard").show();
+      $("#wizard").show();
     } else if(player1.playerClass.includes("fighter")){
       $(".fighter").show();
+      $("#fighter").show();
     } else if(player1.playerClass.includes("ranger")){
       $(".ranger").show();
+      $("#ranger").show();
 
     }
 

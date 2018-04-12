@@ -14,6 +14,10 @@ body {
   display: none;
 }
 
+#rogue, #fighter, #wizard, #ranger {
+  display: none;
+}
+
 #rollButtons  button{
   float: right;
   display: none;
