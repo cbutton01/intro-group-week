@@ -377,11 +377,11 @@ $(document).ready(function(){
     var dieResult = diceRoll(dice);
     if($(".perception").is(":checked")){
       roll += 2;
-      player1.conCheck();
+      player1.wisCheck();
       $(".output").text(roll);
       console.log(dieResult);
     } else {
-      player1.conCheck();
+      player1.wisCheck();
       $(".output").text(roll);
       console.log(dieResult);
     }
