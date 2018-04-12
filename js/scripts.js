@@ -523,12 +523,15 @@ $(document).ready(function(){
     } else if(player1.playerClass.includes("wizard")){
       $(".wizard").show();
       $("#wizard").show();
+      $(".card-background").css('background-image', "url(../intro-group-week/img/library.jpeg)");
     } else if(player1.playerClass.includes("fighter")){
       $(".fighter").show();
       $("#fighter").show();
+      $(".card-background").css('background-image', "url(../intro-group-week/img/colosseum.jpeg)");
     } else if(player1.playerClass.includes("ranger")){
       $(".ranger").show();
       $("#ranger").show();
+      $(".card-background").css('background-image', "url(../intro-group-week/img/forest.jpeg)");
 
     }
 
