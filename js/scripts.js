@@ -12,7 +12,6 @@ function Player(name, race, playerClass){ //player constructor
   this.name = name;
   this.race = race;
   this.playerClass = playerClass;
-  this.skills = [];
   this.str = 10; //strength stat
   this.dex = 10; //dexterity stat
   this.int = 10; //intelligence stat
@@ -194,7 +193,7 @@ $(document).ready(function(){
   //   $('.output').text(dieResult);
   //   console.log(dieResult);
   // });
-  
+
 //all 12 dice roll buttons
   $(".stealthD20").click(function(event){
     event.preventDefault();
@@ -451,6 +450,8 @@ $(document).ready(function(){
 
     $("#statConfirm").click(function(){
       if(pointsToSpend === 0){
+        $(".points").hide();
+        $("#statConfirm").hide();
         $("#toHide").attr({disabled: false});
       }
     });
@@ -511,6 +512,7 @@ $(document).ready(function(){
   $("#confirmSkill").click(function(){
     if("[name:skills]:checked" && skillsToSpend === 0){
       $(".skillBox").hide();
+      $("#confirmSkill").hide();
       $("#rollButtons button").show();
     }
   });
