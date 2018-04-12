@@ -45,10 +45,15 @@ img {
 
 }
 
+.dice-title {
+  text-align: center;
+}
+
 .output {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .dri {
