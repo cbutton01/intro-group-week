@@ -187,14 +187,206 @@ $(document).ready(function(){
     $("#toHide").attr({disabled: true});
   }
 
-  $('#D20').click(function(event){
+  // $('.D20').click(function(event){
+  //   event.preventDefault();
+  //   var dice = parseInt($('.D20').val());
+  //   var dieResult = diceRoll(dice);
+  //   $('.output').text(dieResult);
+  //   console.log(dieResult);
+  // });
+  
+//all 12 dice roll buttons
+  $(".stealthD20").click(function(event){
     event.preventDefault();
-    var dice = parseInt($('#D20').val());
+    var dice = parseInt($(".stealthD20").val());
     var dieResult = diceRoll(dice);
-    $('.output').text(dieResult);
-    console.log(dieResult);
+    if($(".stealth").is(":checked")){
+      roll += 2;
+      player1.dexCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.dexCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
   });
 
+  $(".perfD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".perfD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".performance").is(":checked")){
+      roll += 2;
+      player1.ismaCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.ismaCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".insD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".insD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".insight").is(":checked")){
+      roll += 2;
+      player1.wisCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.wisCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".arcD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".arcD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".arcana").is(":checked")){
+      roll += 2;
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".medD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".medD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".medicine").is(":checked")){
+      roll += 2;
+      player1.wisCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.wisCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".relD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".relD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".religion").is(":checked")){
+      roll += 2;
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".invD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".invD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".investigation").is(":checked")){
+      roll += 2;
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".natureD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".natureD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".nature").is(":checked")){
+      roll += 2;
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.intCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".survD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".survD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".survival").is(":checked")){
+      roll += 2;
+      player1.wisCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.wisCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".athD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".athD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".athletics").is(":checked")){
+      roll += 2;
+      player1.strCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.strCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".intD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".intD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".intimidation").is(":checked")){
+      roll += 2;
+      player1.ismaCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.ismaCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
+
+  $(".percD20").click(function(event){
+    event.preventDefault();
+    var dice = parseInt($(".percD20").val());
+    var dieResult = diceRoll(dice);
+    if($(".perception").is(":checked")){
+      roll += 2;
+      player1.conCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    } else {
+      player1.conCheck();
+      $(".output").text(roll);
+      console.log(dieResult);
+    }
+  });
   //Point/buy system for attributes
   $(".points").click(function(event){
     event.preventDefault();
