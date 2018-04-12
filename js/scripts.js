@@ -60,7 +60,8 @@ Player.prototype.strCheck = function(){
 }
 
 Player.prototype.dexCheck = function(){
-  if(this.dex <= 1){ -5;
+  if(this.dex <= 1){
+    roll -= 5; mod = -5;
   } else if (this.dex >= 2 && this.dex <= 3){
     roll -= 4; mod = -4;
   } else if (this.dex >= 4 && this.dex <= 5){
@@ -215,10 +216,12 @@ $(document).ready(function(){
       roll += 2;
       player1.dexCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     } else {
       player1.dexCheck();
       $(".output").text(roll);
+      $(".modOutput").text("Mod: " + mod);
       console.log(dieResult);
     }
   });
